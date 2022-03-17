@@ -1,1 +1,3 @@
-
+This code is for mac user
+If you use PC, please change the following file  in specific linefrom '/' to '\'
+getdata_from_dat_file.m  line 38 and 40
