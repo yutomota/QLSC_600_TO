@@ -1,13 +1,13 @@
 function [dat,uname]=get_JAABA_data(folder_name,ii)
 %create empty strcture with 3 fields 
-
+choredir=folder_name;
 dat.t0s={};
 dat.t1s={};
 dat.AN={};
 %get all the subfolders inside this directory 
-full = dir(folder_name);
+full = dir(choredir);
 n = 1;
-sear = fullfile(folder_name,'*');
+sear = fullfile(choredir,'*');
 d = 1;
 while length(d) > 0
     sear = fullfile(sear,'*');

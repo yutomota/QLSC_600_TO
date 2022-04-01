@@ -14,7 +14,7 @@ for i=1:length(dat_JAABA.t0_idx)
     % calculate heading directio using x and y 5 points before the turning event
     ind=find(idx0==1|idx1==length(dat_JB.x{i,1}));%if a turning event happens in the first and the last point of the trajectory, delete it
     idx0(ind)=[];idx1(ind)=[];
-    
+    dat_JAABA.t0s{i,1}(ind)=[]; dat_JAABA.t1s{i,1}(ind)=[]; dat_JAABA.t0_idx{i,1}(ind)=[]; dat_JAABA.t1_idx{i,1}(ind)=[];
     if isempty(idx0)||isempty(idx1)
         %if there is no turning event detect here, delete the turning event
         %detect in JAABA as this turning event happens in the start and end point

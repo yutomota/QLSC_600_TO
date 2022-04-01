@@ -1,16 +1,16 @@
 function [dat,uname]=get_JB_data(folder_name,ii)
 % get the data from JB analysis
 %create empty strcture where we store the data
-
+choredir =folder_name;
 dat.xspine = {};
 dat.yspine ={};
 dat.AN={};
 dat.et={};
 
 %get all the subfolder name 
-full = dir(folder_name);
+full = dir(choredir);
 n = 1;
-sear = fullfile(folder_name,'*');
+sear = fullfile(choredir,'*');
 d = 1;
 while length(d) > 0
     sear = fullfile(sear,'*');
